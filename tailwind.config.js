@@ -14,6 +14,13 @@ module.exports = {
         "text-muted": "#9CA3AF",
         danger: "#F87171",
       },
+      fontFamily: {
+        inter: ["Inter_28pt-Regular"],
+        "inter-bold": ["Inter_28pt-Bold"],
+        "inter-medium": ["Inter_28pt-Medium"],
+        "inter-semibold": ["Inter_28pt-SemiBold"],
+        roboto: ["RobotoCondensed-Regular"],
+      },
     },
   },
   plugins: [],

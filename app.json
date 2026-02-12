@@ -38,6 +38,18 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Inter_28pt-Bold.ttf",
+            "./assets/fonts/Inter_28pt-Medium.ttf",
+            "./assets/fonts/Inter_28pt-Regular.ttf",
+            "./assets/fonts/Inter_28pt-SemiBold.ttf",
+            "./assets/fonts/RobotoCondensed-Regular.ttf"
+          ]
+        }
       ]
     ],
     "experiments": {
