@@ -1,6 +1,7 @@
+import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useState } from "react";
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Text, TextInput, TouchableOpacity } from "react-native";
 
 export default function SetupProfileScreen() {
   const router = useRouter();
@@ -15,7 +16,10 @@ export default function SetupProfileScreen() {
   };
 
   return (
-    <View className="flex-1 p-6 justify-center bg-background">
+    <LinearGradient
+      colors={["#0a0f1e", "#1a1f35"]}
+      className="flex-1 p-6 justify-center overflow-hidden"
+    >
       <Text className="text-text-primary text-4xl font-bold mb-2 text-center">
         Profile Setup
       </Text>
@@ -66,6 +70,6 @@ export default function SetupProfileScreen() {
       </TouchableOpacity>
 
       <Text className="text-text-muted text-center mt-4">Step 1 of 3</Text>
-    </View>
+    </LinearGradient>
   );
 }

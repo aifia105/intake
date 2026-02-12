@@ -1,3 +1,4 @@
+import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import { Switch, Text, TouchableOpacity, View } from "react-native";
@@ -11,15 +12,18 @@ export default function SetupRemindersScreen() {
 
   const handleFinish = () => {
     // TODO: Save reminder settings
-    router.replace("/(tabs)");
+    router.replace("/(tabs)/dashboard");
   };
 
   const handleSkip = () => {
-    router.replace("/(tabs)");
+    router.replace("/(tabs)/dashboard");
   };
 
   return (
-    <View className="flex-1 p-6 justify-center bg-background">
+    <LinearGradient
+      colors={["#0a0f1e", "#1a1f35"]}
+      className="flex-1 p-6 justify-center overflow-hidden"
+    >
       <Text className="text-text-primary text-4xl font-bold mb-2 text-center">
         Meal Times Setup
       </Text>
@@ -81,6 +85,6 @@ export default function SetupRemindersScreen() {
       </TouchableOpacity>
 
       <Text className="text-text-muted text-center mt-4">Step 3 of 3</Text>
-    </View>
+    </LinearGradient>
   );
 }

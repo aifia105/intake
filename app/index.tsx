@@ -11,7 +11,6 @@ export default function WelcomeScreen() {
       className="flex-1 overflow-hidden"
     >
       <View className="absolute top-[-100] right-[-50] w-[300px] h-[300px] bg-primary opacity-[0.08] rounded-full" />
-      <View className="absolute bottom-[-80] left-[-40] w-[240px] h-[240px] bg-primary opacity-[0.08] rounded-full" />
 
       <View className="flex-1 px-8 pt-[200px] pb-0">
         <View className="gap-8">
