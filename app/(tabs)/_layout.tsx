@@ -1,67 +1,24 @@
 import { Tabs } from "expo-router";
 import React from "react";
 
-import { HapticTab } from "@/components/haptic-tab";
-import { IconSymbol } from "@/components/ui/icon-symbol";
-import { Colors } from "@/constants/theme";
-import { useColorScheme } from "@/hooks/use-color-scheme";
+import { CustomTabBar } from "@/components/ui/custom-tab-bar";
+import { AppColors } from "@/constants/theme";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
+      tabBar={(props) => <CustomTabBar {...props} />}
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
+        tabBarStyle: { position: "absolute" },
+        sceneStyle: { backgroundColor: AppColors.background },
       }}
     >
-      <Tabs.Screen
-        name="dashboard"
-        options={{
-          title: "Dashboard",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="log"
-        options={{
-          title: "Log",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="plus.circle.fill" color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="progress"
-        options={{
-          title: "Progress",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="chart.bar.fill" color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="reminders"
-        options={{
-          title: "Reminders",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="bell.fill" color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="profile"
-        options={{
-          title: "Profile",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="person.fill" color={color} />
-          ),
-        }}
-      />
+      <Tabs.Screen name="dashboard" />
+      <Tabs.Screen name="logs" />
+      <Tabs.Screen name="progress" />
+      <Tabs.Screen name="reminders" />
+      <Tabs.Screen name="profile" />
     </Tabs>
   );
 }

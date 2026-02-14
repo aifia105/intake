@@ -7,7 +7,7 @@ export default function DashboardStack() {
         name="index"
         options={{
           title: "Dashboard",
-          headerShown: true,
+          headerShown: false,
         }}
       />
     </Stack>

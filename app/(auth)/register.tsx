@@ -38,7 +38,7 @@ export default function RegisterScreen() {
 
   return (
     <View className="flex-1 overflow-hidden">
-      <LinearGradient colors={["#0a0f1e", "#1a1f35"]} className="flex-1">
+      <LinearGradient colors={["#0B0F14", "#151A21"]} className="flex-1">
         <View className="absolute top-[-100] right-[-50] w-[300px] h-[300px] bg-primary opacity-[0.08] rounded-full" />
 
         <View className="h-[25%] px-8 pt-12 justify-between pb-10">
@@ -62,7 +62,7 @@ export default function RegisterScreen() {
           <View
             style={{
               flex: 1,
-              backgroundColor: "#0B0F14",
+              backgroundColor: "#151A21",
               borderTopLeftRadius: 30,
               borderTopRightRadius: 30,
               overflow: "hidden",

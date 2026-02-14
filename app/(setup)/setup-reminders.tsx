@@ -22,7 +22,7 @@ export default function SetupRemindersScreen() {
 
   return (
     <LinearGradient
-      colors={["#0a0f1e", "#1a1f35"]}
+      colors={["#0B0F14", "#151A21"]}
       className="flex-1 p-6 justify-center overflow-hidden"
     >
       <TouchableOpacity

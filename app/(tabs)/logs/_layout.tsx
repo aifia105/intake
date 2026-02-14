@@ -1,12 +1,12 @@
 import { Stack } from "expo-router";
 
-export default function LogStack() {
+export default function LogsStack() {
   return (
     <Stack>
       <Stack.Screen
         name="index"
         options={{
-          title: "Log Meal",
+          title: "Logs",
           headerShown: true,
         }}
       />

@@ -38,7 +38,7 @@ export default function LoginScreen() {
 
   return (
     <View className="flex-1 overflow-hidden">
-      <LinearGradient colors={["#0a0f1e", "#1a1f35"]} className="flex-1">
+      <LinearGradient colors={["#0B0F14", "#151A21"]} className="flex-1">
         <View className="absolute top-[-100] right-[-50] w-[300px] h-[300px] bg-primary opacity-[0.08] rounded-full" />
 
         <View className="h-[25%] px-8 pt-12 justify-between pb-10">
@@ -62,7 +62,7 @@ export default function LoginScreen() {
           <View
             style={{
               flex: 1,
-              backgroundColor: "#0B0F14",
+              backgroundColor: "#151A21",
               borderTopLeftRadius: 30,
               borderTopRightRadius: 30,
               overflow: "hidden",
@@ -150,7 +150,7 @@ export default function LoginScreen() {
               </Text>
               <View className="flex-1 h-[1px] bg-text-muted/20" />
             </View>
-            x
+
             <View className="flex-row gap-4 mb-6">
               <TouchableOpacity className="flex-1 flex-row items-center justify-center py-3.5 rounded-xl border border-text-muted/30 bg-card">
                 <Ionicons name="logo-google" size={20} color="#DB4437" />

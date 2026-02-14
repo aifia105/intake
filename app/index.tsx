@@ -7,7 +7,7 @@ export default function WelcomeScreen() {
 
   return (
     <LinearGradient
-      colors={["#0a0f1e", "#1a1f35"]}
+      colors={["#0B0F14", "#151A21"]}
       className="flex-1 overflow-hidden"
     >
       <View className="absolute top-[-100] right-[-50] w-[300px] h-[300px] bg-primary opacity-[0.08] rounded-full" />
