@@ -1,3 +1,4 @@
+import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useState } from "react";
@@ -24,6 +25,14 @@ export default function SetupRemindersScreen() {
       colors={["#0a0f1e", "#1a1f35"]}
       className="flex-1 p-6 justify-center overflow-hidden"
     >
+      <TouchableOpacity
+        onPress={() => router.back()}
+        className="absolute top-14 left-6 z-10 flex-row items-center"
+      >
+        <Ionicons name="chevron-back" size={24} color="#9CA3AF" />
+        <Text className="text-text-muted text-base ml-1">Back</Text>
+      </TouchableOpacity>
+
       <Text className="text-text-primary text-4xl font-bold mb-2 text-center">
         Meal Times Setup
       </Text>

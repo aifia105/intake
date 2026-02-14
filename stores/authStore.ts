@@ -1,4 +1,9 @@
-import { getCurrentUser, login, register } from "@/api/auth";
+import {
+  logout as apiLogout,
+  getCurrentUser,
+  login,
+  register,
+} from "@/api/auth";
 import {
   LoginRequest,
   RegisterCredentials,
@@ -14,7 +19,7 @@ type authState = {
   login: (loginData: LoginRequest) => Promise<UserData | null>;
   register: (registerData: RegisterCredentials) => Promise<string | void>;
   validateAuth: () => Promise<void>;
-  logout: () => void;
+  logout: () => Promise<void>;
   clearError: () => void;
 };
 
@@ -50,7 +55,8 @@ const useAuthStore = create<authState>((set) => ({
       set({ isLoading: false });
     }
   },
-  logout: () => {
+  logout: async () => {
+    await apiLogout();
     set({ user: null, isAuthenticated: false });
   },
   clearError: () => {

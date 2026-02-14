@@ -5,6 +5,12 @@ export type UserData = {
   age: number;
 };
 
+export type LoginResponse = {
+  user: UserData;
+  accessToken: string;
+  refreshToken: string;
+};
+
 export type LoginRequest = {
   email: string;
   password: string;
