@@ -33,17 +33,17 @@ export default function WelcomeScreen() {
       <View className="flex-row">
         <Pressable
           onPress={() => router.push("/(auth)/register")}
-          className="flex-1 bg-transparent py-[27px] rounded-tr-[40px] items-center active:opacity-70"
+          className="flex-1 bg-transparent py-[22px] rounded-tr-[40px] items-center active:opacity-70"
         >
-          <Text className="text-text-primary text-[17px]  font-inter-semibold">
+          <Text className="text-text-primary text-[17px] mb-1  font-inter-semibold">
             Create Account
           </Text>
         </Pressable>
         <Pressable
           onPress={() => router.push("/(auth)/login")}
-          className="flex-1 bg-primary/70 py-[27px] rounded-tl-[40px] items-center active:opacity-70"
+          className="flex-1 bg-primary/70 py-[22px] rounded-tl-[40px] items-center active:opacity-70"
         >
-          <Text className="text-text-primary text-[17px]  font-inter-semibold">
+          <Text className="text-text-primary text-[17px] mb-1 font-inter-semibold">
             Sign In
           </Text>
         </Pressable>

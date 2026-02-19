@@ -11,7 +11,7 @@ import {
 } from "@/types/auth/AuthTypes";
 import { create } from "zustand";
 
-type authState = {
+export type authState = {
   user: UserData | null;
   isAuthenticated: boolean;
   isLoading: boolean;

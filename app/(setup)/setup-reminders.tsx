@@ -27,16 +27,15 @@ export default function SetupRemindersScreen() {
     >
       <TouchableOpacity
         onPress={() => router.back()}
-        className="absolute top-14 left-6 z-10 flex-row items-center"
+        className="absolute top-16 left-6 z-10 flex-row items-center"
       >
         <Ionicons name="chevron-back" size={24} color="#9CA3AF" />
-        <Text className="text-text-muted text-base ml-1">Back</Text>
       </TouchableOpacity>
 
-      <Text className="text-text-primary text-4xl font-bold mb-2 text-center">
+      <Text className="text-text-primary text-4xl mr-2 font-bold mb-2 text-center">
         Meal Times Setup
       </Text>
-      <Text className="text-text-muted text-base mb-8 text-center">
+      <Text className="text-text-muted text-base mb-8 mr-2 text-center">
         Set reminders for your meals
       </Text>
 
@@ -81,7 +80,7 @@ export default function SetupRemindersScreen() {
       </View>
 
       <TouchableOpacity
-        className="bg-primary p-4 rounded-lg items-center mt-8"
+        className="bg-primary p-4 rounded-lg items-center mt-10"
         onPress={handleFinish}
       >
         <Text className="text-background text-base font-semibold">

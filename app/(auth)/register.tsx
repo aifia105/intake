@@ -41,15 +41,12 @@ export default function RegisterScreen() {
       <LinearGradient colors={["#0B0F14", "#151A21"]} className="flex-1">
         <View className="absolute top-[-100] right-[-50] w-[300px] h-[300px] bg-primary opacity-[0.08] rounded-full" />
 
-        <View className="h-[25%] px-8 pt-12 justify-between pb-10">
+        <View className="h-[25%] px-8 pt-16 justify-between pb-10">
           <Pressable
             onPress={() => router.push("/")}
             className="flex-row items-center gap-2"
           >
             <MaterialIcons name="arrow-back-ios" size={24} color="#ffffff" />
-            <Text className="text-text-primary text-[18px] mb-0.5 font-inter-medium">
-              Back
-            </Text>
           </Pressable>
         </View>
 
@@ -78,7 +75,7 @@ export default function RegisterScreen() {
               elevation: 10,
             }}
           >
-            <Text className="text-text-muted text-3xl font-inter-semibold mx-auto mb-8 text-center">
+            <Text className="text-text-muted text-3xl font-inter-semibold mr-2 mb-8 text-center">
               Create Account
             </Text>
             <View className="mb-5">

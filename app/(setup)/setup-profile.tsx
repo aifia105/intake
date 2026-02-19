@@ -27,7 +27,7 @@ export default function SetupProfileScreen() {
   };
 
   return (
-    <LinearGradient colors={["#0B0F14", "#151A21"]} className="flex-1">
+    <LinearGradient colors={["#0B0F14", "#151A21"]} className="flex-1 pt-10">
       <ScrollView
         className="flex-1 p-6"
         contentContainerStyle={{

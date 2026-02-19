@@ -31,16 +31,15 @@ export default function SetupGoalsScreen() {
     >
       <TouchableOpacity
         onPress={() => router.back()}
-        className="absolute top-14 left-6 z-10 flex-row items-center"
+        className="absolute top-16 left-6 z-10 flex-row items-center"
       >
         <Ionicons name="chevron-back" size={24} color="#9CA3AF" />
-        <Text className="text-text-muted text-base ml-1">Back</Text>
       </TouchableOpacity>
 
-      <Text className="text-text-primary text-4xl font-bold mb-2 text-center">
+      <Text className="text-text-primary text-4xl mr-2 font-bold mb-2 text-center">
         Goal Setup
       </Text>
-      <Text className="text-text-muted text-base mb-8 text-center">
+      <Text className="text-text-muted text-base mr-2 mb-8 text-center">
         Set your nutrition goals
       </Text>
 
