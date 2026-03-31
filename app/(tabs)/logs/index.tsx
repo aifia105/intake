@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FlatList, Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 type LogEntry = {
   id: string;
@@ -103,43 +104,47 @@ export default function LogsScreen() {
   ];
 
   return (
-    <View className="flex-1 bg-background">
-      {/* Filter Chips */}
-      <View className="flex-row px-4 pt-4 pb-2">
-        {filters.map((f) => (
-          <TouchableOpacity
-            key={f.key}
-            onPress={() => setFilter(f.key)}
-            className={`rounded-full px-4 py-2 mr-2 ${
-              filter === f.key ? "bg-primary" : "bg-card border border-white/10"
-            }`}
-          >
-            <Text
-              className={`text-sm font-semibold ${
-                filter === f.key ? "text-background" : "text-text-muted"
+    <SafeAreaView className="flex-1 bg-background">
+      <View className="flex-1 bg-background">
+        {/* Filter Chips */}
+        <View className="flex-row px-4 pt-4 pb-2">
+          {filters.map((f) => (
+            <TouchableOpacity
+              key={f.key}
+              onPress={() => setFilter(f.key)}
+              className={`rounded-full px-4 py-2 mr-2 ${
+                filter === f.key
+                  ? "bg-primary"
+                  : "bg-card border border-white/10"
               }`}
             >
-              {f.label}
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </View>
+              <Text
+                className={`text-sm font-semibold ${
+                  filter === f.key ? "text-background" : "text-text-muted"
+                }`}
+              >
+                {f.label}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </View>
 
-      {/* Log List */}
-      <FlatList
-        data={MOCK_LOGS}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <LogCard item={item} />}
-        contentContainerStyle={{ padding: 16, paddingBottom: 100 }}
-        showsVerticalScrollIndicator={false}
-        ListEmptyComponent={
-          <View className="items-center justify-center py-20">
-            <Text className="text-text-muted text-base">
-              No logs yet. Start logging your meals!
-            </Text>
-          </View>
-        }
-      />
-    </View>
+        {/* Log List */}
+        <FlatList
+          data={MOCK_LOGS}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => <LogCard item={item} />}
+          contentContainerStyle={{ padding: 16, paddingBottom: 100 }}
+          showsVerticalScrollIndicator={false}
+          ListEmptyComponent={
+            <View className="items-center justify-center py-20">
+              <Text className="text-text-muted text-base">
+                No logs yet. Start logging your meals!
+              </Text>
+            </View>
+          }
+        />
+      </View>
+    </SafeAreaView>
   );
 }

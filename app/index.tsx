@@ -1,53 +1,56 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { Pressable, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function WelcomeScreen() {
   const router = useRouter();
 
   return (
-    <LinearGradient
-      colors={["#0B0F14", "#151A21"]}
-      className="flex-1 overflow-hidden"
-    >
-      <View className="absolute top-[-100] right-[-50] w-[300px] h-[300px] bg-primary opacity-[0.08] rounded-full" />
+    <SafeAreaView className="flex-1">
+      <LinearGradient
+        colors={["#0B0F14", "#151A21"]}
+        className="flex-1 overflow-hidden"
+      >
+        <View className="absolute top-[-100] right-[-50] w-[300px] h-[300px] bg-primary opacity-[0.08] rounded-full" />
 
-      <View className="flex-1 px-8 pt-[200px] pb-0">
-        <View className="gap-8">
-          <Text className="text-5xl font-inter-bold text-text-primary mb-10">
-            Intake
-          </Text>
-          <View className="gap-2">
-            <Text className="text-3xl font-inter-semibold  text-text-muted">
-              Welcome
+        <View className="flex-1 px-8 pt-[200px] pb-0">
+          <View className="gap-8">
+            <Text className="text-5xl font-inter-bold text-text-primary mb-10">
+              Intake
             </Text>
-            <Text className="text-base font-inter-regular text-text-muted leading-6">
-              Track your nutrition and build better habits
-            </Text>
+            <View className="gap-2">
+              <Text className="text-3xl font-inter-semibold  text-text-muted">
+                Welcome
+              </Text>
+              <Text className="text-base font-inter-regular text-text-muted leading-6">
+                Track your nutrition and build better habits
+              </Text>
+            </View>
           </View>
+
+          <View className="flex-1" />
         </View>
 
-        <View className="flex-1" />
-      </View>
-
-      <View className="flex-row">
-        <Pressable
-          onPress={() => router.push("/(auth)/register")}
-          className="flex-1 bg-transparent py-[22px] rounded-tr-[40px] items-center active:opacity-70"
-        >
-          <Text className="text-text-primary text-[17px] mb-1  font-inter-semibold">
-            Create Account
-          </Text>
-        </Pressable>
-        <Pressable
-          onPress={() => router.push("/(auth)/login")}
-          className="flex-1 bg-primary/70 py-[22px] rounded-tl-[40px] items-center active:opacity-70"
-        >
-          <Text className="text-text-primary text-[17px] mb-1 font-inter-semibold">
-            Sign In
-          </Text>
-        </Pressable>
-      </View>
-    </LinearGradient>
+        <View className="flex-row">
+          <Pressable
+            onPress={() => router.push("/(auth)/register")}
+            className="flex-1 bg-transparent py-[22px] rounded-tr-[40px] items-center active:opacity-70"
+          >
+            <Text className="text-text-primary text-[17px] mb-1  font-inter-semibold">
+              Create Account
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={() => router.push("/(auth)/login")}
+            className="flex-1 bg-primary/70 py-[22px] rounded-tl-[40px] items-center active:opacity-70"
+          >
+            <Text className="text-text-primary text-[17px] mb-1 font-inter-semibold">
+              Sign In
+            </Text>
+          </Pressable>
+        </View>
+      </LinearGradient>
+    </SafeAreaView>
   );
 }

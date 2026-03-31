@@ -12,6 +12,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const { height: SCREEN_HEIGHT } = Dimensions.get("window");
 
@@ -37,7 +38,7 @@ export default function RegisterScreen() {
   };
 
   return (
-    <View className="flex-1 overflow-hidden">
+    <SafeAreaView className="flex-1 overflow-hidden">
       <LinearGradient colors={["#0B0F14", "#151A21"]} className="flex-1">
         <View className="absolute top-[-100] right-[-50] w-[300px] h-[300px] bg-primary opacity-[0.08] rounded-full" />
 
@@ -160,6 +161,6 @@ export default function RegisterScreen() {
           </View>
         </Animated.View>
       </LinearGradient>
-    </View>
+    </SafeAreaView>
   );
 }

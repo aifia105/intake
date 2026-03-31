@@ -12,7 +12,6 @@ import "react-native-reanimated";
 import "../global.css";
 
 import { AuthProvider } from "@/components/context/AuthContext";
-import { useColorScheme } from "@/hooks/use-color-scheme";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -21,8 +20,6 @@ export const unstable_settings = {
 };
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
   const [fontsLoaded] = useFonts({
     "Inter_28pt-Regular": require("../assets/fonts/Inter_28pt-Regular.ttf"),
     "Inter_28pt-Bold": require("../assets/fonts/Inter_28pt-Bold.ttf"),
@@ -42,7 +39,7 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={DarkTheme}>
       <AuthProvider>
         <Stack
           screenOptions={{
@@ -53,10 +50,6 @@ export default function RootLayout() {
           <Stack.Screen name="(auth)" />
           <Stack.Screen name="(setup)" />
           <Stack.Screen name="(tabs)" />
-          <Stack.Screen
-            name="modal"
-            options={{ presentation: "modal", title: "Modal" }}
-          />
         </Stack>
         <StatusBar style="auto" />
       </AuthProvider>

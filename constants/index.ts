@@ -26,3 +26,25 @@ export const GOAL_OPTIONS = [
   { key: "maintain", label: "Maintain", icon: "horizontal-rule" as const },
   { key: "bulk", label: "Bulk", icon: "trending-up" as const },
 ] as const;
+
+export const TAB_ICONS: Record<string, any> = {
+  dashboard: "house.fill",
+  logs: "list.bullet",
+  progress: "chart.bar.fill",
+  reminders: "bell.fill",
+  profile: "person.fill",
+};
+
+export const TAB_LABELS: Record<string, string> = {
+  dashboard: "Home",
+  logs: "Logs",
+  progress: "Progress",
+  reminders: "Reminders",
+  profile: "Profile",
+};
+
+export const SPRING_CONFIG = {
+  damping: 15,
+  stiffness: 150,
+  mass: 0.5,
+};
